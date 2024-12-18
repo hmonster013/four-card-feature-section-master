@@ -1,0 +1,160 @@
+:root {
+    --Red: hsl(0, 78%, 62%);
+    --Cyan: hsl(180, 62%, 55%);
+    --Orange: hsl(34, 97%, 64%);
+    --Blue: hsl(212, 86%, 64%);
+    --White: rgb(255, 255, 255);
+
+    --Very-Dark-Blue: hsl(234, 12%, 34%);
+    --Grayish-Blue: hsl(229, 6%, 66%);
+    --Very-Light-Gray: hsl(0, 0%, 98%);
+}
+
+html {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body {
+    display: flex;
+    width: 1080px;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--Very-Light-Gray);
+    box-sizing: border-box;
+    font-family: Poppins;
+    font-size: 15px;
+    margin: 0px;
+}
+
+
+.container {
+    width: 100%;
+    margin: 10px 0px;
+}
+
+.container__header {
+    text-align: center;
+    justify-items: center;
+}
+
+.container__header--title-1 {
+    font-size: 32px;
+    color: var(--Grayish-Blue);
+    font-weight: 200;
+}
+
+.container__header--title-2 h2{
+    font-size: 32px;
+    color: var(--Very-Dark-Blue);
+    font-weight: 600;
+    margin: 0px;
+}
+
+.container__header--description {
+    max-width: 450px;
+    font-size: 15px;
+    color: var(--Grayish-Blue);
+    margin: 0px;
+}
+
+.container__body {
+    display: grid;
+    grid-template: 1fr 1fr / 1fr 1fr 1fr;
+    gap: 15px;
+}
+
+.container__body--card-supervisor, 
+.container__body--card-builder, 
+.container__body--card-karma, 
+.container__body--card-calculator {
+    position: relative;
+    width: 350px;
+    height: 243px;
+    box-sizing: border-box;
+    background-color: var(--White);
+    border-radius: 5px;
+    padding: 25px;
+    box-shadow: rgba(205, 205, 205, 0.808) 0px 6px 10px 0px;
+}
+
+.container__body--card-title {
+    font-size: 20.8px;
+    color: var(--Very-Dark-Blue);
+}
+
+.container__body--card-description {
+    font-size: 15px;
+    line-height: 25px;
+    color: var(--Grayish-Blue);
+}
+
+.container__body--card-icon {
+    position: absolute;
+    right: 25px;
+    bottom: 25px;
+}
+
+.container__body--card-supervisor{
+    border-top: 3px solid var(--Blue);
+    grid-area: 1 / 1 / 3 / 2;
+    margin: auto 0px;
+} 
+
+.container__body--card-builder{
+    border-top: 3px solid var(--Red);
+    grid-area: 1 / 2 / 2 / 3;
+} 
+
+.container__body--card-karma{
+    border-top: 3px solid var(--Orange);
+    grid-area: 2 / 2 / 3 / 3;
+} 
+
+.container__body--card-calculator{
+    border-top: 3px solid var(--Cyan);
+    grid-area: 1 / 3 / 3 / 4;
+    margin: auto 0px;
+}
+
+@media (max-width: 1080px) {
+    .container__body {
+        display: grid;
+        grid-template: 1fr 1fr / 1fr 1fr;
+    }
+
+    .container__body--card-supervisor { 
+        grid-area: 1 / 1; 
+        margin: 0 auto;
+    }
+
+    .container__body--card-builder { 
+        grid-area: 2 / 1; 
+        margin: 0 auto;
+    }
+
+    .container__body--card-karma { 
+        grid-area: 1 / 2; 
+        margin: 0 auto;
+    }
+
+    .container__body--card-calculator { 
+        grid-area: 2 / 2; 
+        margin: 0 auto;
+    }
+
+}
+
+@media (max-width: 725px) {
+    body {
+        height: auto;
+    }
+
+    .container__body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
