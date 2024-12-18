@@ -54,7 +54,7 @@ body {
 }
 
 .container__header--description {
-    max-width: 500px;
+    max-width: 450px;
     font-size: 15px;
     color: var(--Grayish-Blue);
     margin: 0px;
