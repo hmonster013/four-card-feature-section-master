@@ -82,6 +82,7 @@ body {
 
 .container__body--card-title {
     font-size: 20.8px;
+    font-weight: 200;
     color: var(--Very-Dark-Blue);
 }
 
